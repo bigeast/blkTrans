@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( blkTrans )
+find_package( OpenCV REQUIRED )
+add_executable( blkTrans blkTrans.cc dct.cc mem.cc )
+target_link_libraries( blkTrans ${OpenCV_LIBS} )
+set(CMAKE_BUILD_TYPE "Debug")
